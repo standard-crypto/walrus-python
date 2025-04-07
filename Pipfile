@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+pycryptodome = "*"
+
+[dev-packages]
+pytest = "*"
+black = "*"
+flake8 = "*"
+build = "*"
+twine = "*"
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+test = "pytest"
+lint = "flake8 walrus"
+format = "black walrus tests"
+build = "python -m build"
