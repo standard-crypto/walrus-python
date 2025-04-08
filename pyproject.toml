@@ -1,6 +1,6 @@
 [project]
 name = "walrus-python"
-version = "0.0.4"
+version = "0.1.0"
 description = "Python SDK for Walrus, a decentralized blob storage protocol"
 authors = [{ name = "Kevin Ayling", email = "kevin@standardcryptovc.com" }]
 readme = "README.md"

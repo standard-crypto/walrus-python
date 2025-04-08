@@ -118,6 +118,6 @@ except WalrusAPIError as e:
     print(e)
 ```
 
-Contributing
+### Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue for any suggestions, improvements, or bug reports.
