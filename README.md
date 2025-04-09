@@ -1,6 +1,6 @@
 # Walrus Python SDK 
 
-The walrus-python SDK provides a Python client for interacting with the Walrus HTTP API. Walrus is a decentralized storage system built on the Sui blockchain, allowing you to store and retrieve blobs efficiently.
+The walrus-python SDK provides a Python client for interacting with the [Walrus HTTP API](https://docs.wal.app/usage/web-api.html). [Walrus](https://www.walrus.xyz/) is a decentralized storage system built on the Sui blockchain, allowing you to store and retrieve blobs efficiently.
 
 [![PyPI](https://img.shields.io/pypi/v/walrus-python.svg)](https://pypi.org/project/walrus-python/)
 [![License](https://img.shields.io/pypi/l/walrus-python.svg)](https://pypi.org/project/walrus-python/)
@@ -16,6 +16,8 @@ pip install walrus-python
 
 ### Initializing the Client
 
+[List of public aggregators & publishers](https://docs.wal.app/usage/web-api.html#public-services)
+
 ```python
 from walrus import WalrusClient
 
@@ -25,18 +27,17 @@ aggregator_url = "https://aggregator.walrus-testnet.walrus.space"
 client = WalrusClient(publisher_base_url=publisher_url, aggregator_base_url=aggregator_url)
 ```
 
-
 ### Uploading a Blob
 
 #### Available Parameters
 
 - `encoding_type` (*Optional[str]*): Specifies the encoding used for the blob.
 
-- `epochs` (*Optional[int]*): Number of epochs ahead of the current one to store the blob.
+- `epochs` (*Optional[int], default: 1*): Number of epochs ahead of the current one to store the blob.
 
-- `deletable` (*Optional[bool]*): Determines whether the blob can be deleted later (True) or is permanent (False).
+- `deletable` (*Optional[bool], default: False*): Determines whether the blob can be deleted later (True) or is permanent (False).
 
-- `send_object_to` (*Optional[str]*): If provided, sends the Blob object to the specified Sui address.
+- `send_object_to` (*Optional[str]*): If provided, sends the Blob object to the specified Sui address. Default: 
 
 #### From Bytes
 
